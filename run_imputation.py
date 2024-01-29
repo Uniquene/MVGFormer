@@ -17,7 +17,6 @@ import networkx as nx
 import argparse
 import sys
 import os
-# os.environ['CUDA_VISIBLE_DEVICES']='0'
 import warnings
 warnings.filterwarnings('ignore')
 import torch.optim as optim
@@ -109,9 +108,8 @@ if __name__ == "__main__":
 
             # data loader
             parser.add_argument('--data', type=str, required=False, default=info['data'], help='dataset type')
-            parser.add_argument('--root_path', type=str, default='E:\phd\coding\DATA\Public Dataset\Forecasting\\all_datasets\\{}'.format(info['root_path']), help='root path of the data file')
-            # parser.add_argument('--root_path', type=str, default='/dataset/all_datasets/ETT-small',
-            #                     help='root path of the data file')
+            parser.add_argument('--root_path', type=str, default='/dataset/all_datasets/ETT-small',
+                                help='root path of the data file')
             parser.add_argument('--data_path', type=str, default=info['data_path'], help='data file')
             parser.add_argument('--features', type=str, default='M',
                                 help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
