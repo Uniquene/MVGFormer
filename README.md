@@ -1,9 +1,17 @@
 # MVGFormer
 
-\section{(1)Forecasting Task:}
+(1)Forecasting Task: 
 
-\section{(1)Classification Task:}
+python run_forecasting.py --root_path [dataset\_path]
 
-\section{(1)Imputation Task:}
+(2)Classification Task:
 
-\section{(1)Anomaly Task:}
+python run_forecasting.py
+
+(3)Imputation Task:
+
+python run_forecasting.py
+
+(4)Anomaly Task:
+
+python run_forecasting.py
