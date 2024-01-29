@@ -17,7 +17,7 @@ import networkx as nx
 import argparse
 import sys
 import os
-# os.environ['CUDA_VISIBLE_DEVICES']='0'
+
 import warnings
 warnings.filterwarnings('ignore')
 import torch.optim as optim
