@@ -16,7 +16,6 @@ import networkx as nx
 import argparse
 import sys
 import os
-# os.environ['CUDA_VISIBLE_DEVICES']='0'
 import warnings
 warnings.filterwarnings('ignore')
 import torch.optim as optim
@@ -56,7 +55,6 @@ def gpu_setup(use_gpu, gpu_id):
     else:
         print('cuda not available')
         device = torch.device("cpu")
-    device = torch.device("cpu")
     return device
 
 
@@ -96,9 +94,8 @@ if __name__ == "__main__":
 
         # data loader
         parser.add_argument('--data', type=str, required=False, default='m4', help='dataset type')
-        parser.add_argument('--root_path', type=str, default='E:\phd\coding\DATA\Public Dataset\Forecasting\\all_datasets\\m4', help='root path of the data file')
-        # parser.add_argument('--root_path', type=str, default='/dataset/all_datasets/m4',
-        #                     help='root path of the data file')
+        parser.add_argument('--root_path', type=str, default='/dataset/all_datasets/m4',
+                            help='root path of the data file')
         parser.add_argument('--data_path', type=str, default='ETTh1.csv', help='data file')
         parser.add_argument('--features', type=str, default='M',
                             help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
