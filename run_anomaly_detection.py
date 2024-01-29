@@ -99,7 +99,6 @@ if __name__ == "__main__":
 
         # data loader
         parser.add_argument('--data', type=str, required=False, default=info['data'], help='dataset type')
-        # parser.add_argument('--root_path', type=str, default='E:\phd\coding\DATA\Public Dataset\Forecasting\\all_datasets\\{}'.format(info['root_path']), help='root path of the data file')
         parser.add_argument('--root_path', type=str, default='/dataset/all_datasets/{}'.format(info['root_path']),
                             help='root path of the data file')
         parser.add_argument('--data_path', type=str, default='national_illness.csv', help='data file')
