@@ -248,12 +248,12 @@ from sklearn.model_selection import StratifiedShuffleSplit
 def kFoldGenerator(data, label, test_size):
 
     # logger.info("##### Generate k-Fold dataset ######")
-    # f分层抽样，保证划分的train和val的样本分布是均匀的
+
     sss = StratifiedShuffleSplit(n_splits=1, test_size=test_size)
 
     x_train = {}
     x_test = {}
-    # 使用对象拆分数据集
+
     for train_index, test_index in sss.split(data['node_feature_matrix'], label):
         x_train['adj_matrix'] = data['adj_matrix'][train_index]
         x_train['node_feature_matrix'] = data['node_feature_matrix'][train_index]
@@ -308,10 +308,10 @@ def kFoldGenerator(data, label, test_size):
 
 def kFoldGenerator_split_raw_data(data, label, test_size):
     # logger.info("##### Generate k-Fold dataset ######")
-    # f分层抽样，保证划分的train和val的样本分布是均匀的
+
     sss = StratifiedShuffleSplit(n_splits=1, test_size=test_size)
 
-    # 使用对象拆分数据集
+
     for train_index, test_index in sss.split(data, label):
         x_train = data[train_index]
         y_train = label[train_index]
