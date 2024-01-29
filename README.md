@@ -1,17 +1,17 @@
 # MVGFormer
 
-## (1)Forecasting Task: 
+## Forecasting: 
 
 `python run_forecasting.py --root_path [dataset\_path] `
 
-## (2)Classification Task:
+## Classification:
 
 `python run_forecasting.py`
 
-## (3)Imputation Task:
+## Imputation:
 
 `python run_forecasting.py`
 
-## (4)Anomaly Task:
+## Anomaly Detection:
 
 `python run_forecasting.py`
